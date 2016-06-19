@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Nils\Desktop\TrackerTest\Interface AirTable\Menüauswahl.v4p" scrollx="0" scrolly="1920">
+   <PATCH nodename="C:\Users\Nils\Documents\GitHub\aircade\Interface AirTable\Menüauswahl.v4p" scrollx="0" scrolly="120">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2205" top="3240" width="540" height="270">
    </BOUNDS>
@@ -57,7 +57,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" visible="1">
+   <PIN pinname="TranslateX" visible="1" slicecount="4" values="-1,-0.33,0.33,1">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.65">
    </PIN>
@@ -66,16 +66,6 @@
    <PIN pinname="Rotate" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="-0.61">
-   </PIN>
-   </NODE>
-   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="2520" top="4770" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0.68">
-   </PIN>
-   <PIN pinname="Hue" visible="1" slicecount="4" values="-1,-0.33,0.33,1">
    </PIN>
    </NODE>
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="6">
@@ -97,7 +87,7 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="4" values="|1.00000,1.00000,1.00000,0.68000|,|1.00000,1.00000,1.00000,0.68000|,|1.00000,1.00000,1.00000,0.68000|,|1.00000,1.00000,1.00000,0.68000|">
    </PIN>
    <PIN pinname="Inner Radius" slicecount="1" values="0.94">
    </PIN>
@@ -109,7 +99,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1980" top="1500" width="585" height="930">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="4">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -119,25 +109,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="-1,-0.33,0.33,1">
-   </PIN>
-   </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
-   <BOUNDS type="Node" left="3990" top="1200" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3990" top="1200" width="585" height="930">
-   </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Real">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="-1,-0.33,0.33,1">
+   <PIN pinname="Y Input Value" slicecount="3" values="-0.7,0,0.7">
    </PIN>
    </NODE>
    <NODE systemname="HitTest (2d Quad)" filename="%VVVV%\addonpack\lib\nodes\plugins\HitTest2dNodes.dll" nodename="HitTest (2d Quad)" componentmode="Hidden" id="11">
@@ -228,8 +200,6 @@
    </NODE>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="7" dstpinname="Color">
-   </LINK>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="3" dstpinname="TranslateX">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 1">
@@ -246,8 +216,6 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateX">
-   </LINK>
    <LINK srcnodeid="11" srcpinname="Object Id" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="11" dstpinname="Transform In">
@@ -262,7 +230,7 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Object Hit" dstnodeid="15" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="4530" top="1980" width="10605" height="13140">
+   <BOUNDS type="Window" left="2415" top="1170" width="10605" height="13140">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -321,7 +289,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4680" top="5430" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="4" visible="1" values="Classy,Catchy,Billy,Bitchy">
+   <PIN pinname="Input String" slicecount="3" visible="1" values="Classy,Catchy,Billy">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="vvvv">
    </PIN>
@@ -329,7 +297,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -399,6 +367,8 @@
    </PIN>
    <PIN pinname="Mode" slicecount="1" values="| Linear|">
    </PIN>
+   <PIN pinname="Width" slicecount="1" values="510">
+   </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="7" dstpinname="Texture">
    </LINK>
@@ -435,7 +405,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" visible="1">
+   <PIN pinname="TranslateX" visible="1" slicecount="4" values="-1,-0.33,0.33,1">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.65">
    </PIN>
@@ -456,26 +426,6 @@
    <PIN pinname="Alpha" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="35">
-   <BOUNDS type="Node" left="6330" top="810" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6330" top="810" width="585" height="930">
-   </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Real">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="-1,-0.33,0.33,1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="37" dstpinname="TranslateX">
-   </LINK>
    <NODE systemname="Segment (DX9)" nodename="Segment (DX9)" componentmode="Hidden" id="34">
    <BOUNDS type="Node" left="5775" top="4320" width="100" height="100">
    </BOUNDS>
@@ -551,7 +501,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7230" top="8535" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="4" visible="1" values="|1 vs 1|,coop,|1 vs 1|,single">
+   <PIN pinname="Input String" slicecount="3" visible="1" values="|1 vs 1|,coop,|1 vs 1|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="vvvv">
    </PIN>
@@ -559,7 +509,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -625,5 +575,31 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="42" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="37" dstpinname="TranslateX">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="750" top="1920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="0.9">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="0.55">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="26" dstpinname="Color B">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="2595" top="4740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="7" dstpinname="Color">
    </LINK>
    </PATCH>
